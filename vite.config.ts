@@ -15,19 +15,34 @@ export default defineConfig(({ mode }) => {
         fileName: (format) => `index.${format === 'es' ? 'esm.js' : 'js'}`
       },
       rollupOptions: {
-        external: ['solid-js'],
+        external: ['solid-js', 'solid-js/web'],
         output: {
           globals: {
-            'solid-js': 'SolidJS'
+            'solid-js': 'SolidJS',
+            'solid-js/web': 'SolidJSWeb'
           }
         }
-      }
+      },
+      target: 'esnext',
+      minify: 'esbuild'
     } : {
-      // Development/playground build
-      outDir: 'dist-playground'
+      outDir: 'dist-playground',
+      target: 'esnext'
     },
     server: {
-      port: 3000
+      port: 3000,
+      host: true,
+      hmr: {
+        overlay: false
+      }
+    },
+    optimizeDeps: {
+      include: ['solid-js', 'solid-js/web'],
+      force: true
+    },
+    esbuild: {
+      target: 'esnext',
+      format: 'esm'
     }
   };
 });
