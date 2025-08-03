@@ -141,7 +141,9 @@ export interface TableProps extends BaseProps {
 
 export interface TableHeaderProps extends BaseProps {}
 export interface TableBodyProps extends BaseProps {}
-export interface TableRowProps extends BaseProps {}
+export interface TableRowProps extends BaseProps {
+  onClick?: () => void;
+}
 
 export interface TableCellProps extends BaseProps {
   header?: boolean;

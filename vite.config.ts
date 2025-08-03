@@ -20,6 +20,12 @@ export default defineConfig(({ mode }) => {
           globals: {
             'solid-js': 'SolidJS',
             'solid-js/web': 'SolidJSWeb'
+          },
+          assetFileNames: (assetInfo) => {
+            if (assetInfo.name === 'style.css') {
+              return 'solid-tuicss.css';
+            }
+            return assetInfo.name;
           }
         }
       },

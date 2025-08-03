@@ -15,6 +15,13 @@ export const Modal: Component<ModalProps> = (props) => {
           id={props.id}
           class={cn('tui-modal', props.class)}
           onClick={(e) => e.stopPropagation()}
+          style={{
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            'z-index': '1000'
+          }}
         >
           <div class={cn('tui-window', props.color)}>
             <fieldset class="tui-fieldset">
