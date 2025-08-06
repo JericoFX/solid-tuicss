@@ -7,25 +7,33 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./css": "./dist/tuicss.css"
+      "require": "./dist/index.js"
+    }
   },
   "files": [
-    "dist"
+    "dist",
+    "node_modules/tuicss"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "./src/index.ts"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && tsc --emitDeclarationOnly",
-    "build:lib": "vite build --mode lib && tsc --emitDeclarationOnly",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src/**/*.{ts,tsx}",
-    "prepublishOnly": "npm run build:lib",
-    "playground:dev": "cd playground && npm run dev",
-    "playground:build": "cd playground && npm run build"
+    "dev": "cd playground && bunx --bun vite",
+    "build": "bunx --bun vite build && bunx tsc --emitDeclarationOnly",
+    "build:lib": "bunx --bun vite build --mode lib && bunx tsc --emitDeclarationOnly",
+    "preview": "bunx --bun vite preview",
+    "typecheck": "bunx tsc --noEmit",
+    "lint": "bunx eslint src/**/*.{ts,tsx}",
+    "prepublishOnly": "bun run build:lib",
+    "playground:dev": "cd playground && bun run dev",
+    "playground:build": "cd playground && bun run build",
+    "deploy": "./scripts/deploy.sh",
+    "deploy:github": "./scripts/deploy.sh github",
+    "deploy:netlify": "./scripts/deploy.sh netlify",
+    "deploy:surge": "./scripts/deploy.sh surge"
   },
   "keywords": [
     "solidjs",
@@ -50,18 +58,21 @@
     "solid-js": "^1.8.0"
   },
   "dependencies": {
-    "tuicss": "^2.1.2",
     "clsx": "^2.1.1"
   },
+  "bundledDependencies": [
+    "tuicss"
+  ],
   "devDependencies": {
-    "@solidjs/testing-library": "^0.8.5",
-    "@types/node": "^20.10.5",
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.17.0",
-    "eslint": "^8.56.0",
-    "solid-js": "^1.8.11",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.10",
-    "vite-plugin-solid": "^2.8.2"
+    "@solidjs/testing-library": "^0.8.10",
+    "@types/node": "^22.10.5",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^9.32.0",
+    "solid-js": "^1.9.7",
+    "tuicss": "^2.1.2",
+    "typescript": "^5.8.4",
+    "vite": "^7.0.6",
+    "vite-plugin-solid": "^2.11.8"
   }
 }

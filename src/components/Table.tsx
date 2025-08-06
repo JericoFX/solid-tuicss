@@ -40,11 +40,17 @@ export const TableBody: Component<TableBodyProps> = (props) => {
   );
 };
 
-export interface TableRowProps extends BaseProps {}
+export interface TableRowProps extends BaseProps {
+  onClick?: () => void;
+}
 
 export const TableRow: Component<TableRowProps> = (props) => {
   return (
-    <tr class={cn('tui-table-row', props.class)}>
+    <tr 
+      class={cn('tui-table-row', props.onClick && 'clickable', props.class)}
+      onClick={props.onClick}
+      style={props.onClick ? { cursor: 'pointer' } : undefined}
+    >
       {props.children}
     </tr>
   );
