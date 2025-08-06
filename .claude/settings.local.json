@@ -14,7 +14,12 @@
       "Bash(chmod:*)",
       "WebFetch(domain:github.com)",
       "Bash(npm run build:lib:*)",
-      "Bash(npm run typecheck:*)"
+      "Bash(npm run typecheck:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle exec:*)",
+      "Bash(git config:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }

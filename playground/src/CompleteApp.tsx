@@ -1,4 +1,5 @@
 import { Component, createSignal } from 'solid-js';
+import { Chart } from '../../src/components/Chart';
 
 const CompleteApp: Component = () => {
   const [inputValue, setInputValue] = createSignal('Sample text');
@@ -383,42 +384,34 @@ const CompleteApp: Component = () => {
                 <div class="container">
                   <div class="row">
                     <div class="col s12 m6">
-                      <div class="tui-chart-vertical" style="height: 200px; width: 100%; background-color: #000;">
-                        <div class="tui-chart-display">
-                          <div class="tui-chart-value cyan-255" style="height: 60%;">60</div>
-                          <div class="tui-chart-value green-255" style="height: 80%;">80</div>
-                          <div class="tui-chart-value red-255" style="height: 40%;">40</div>
-                          <div class="tui-chart-value yellow-255" style="height: 90%;">90</div>
-                        </div>
-                        <div class="tui-chart-x-axis">
-                          <div class="tui-chart-legend">Q1</div>
-                          <div class="tui-chart-legend">Q2</div>
-                          <div class="tui-chart-legend">Q3</div>
-                          <div class="tui-chart-legend">Q4</div>
-                        </div>
-                        <div class="tui-chart-y-axis">
-                          <div class="tui-chart-legend">100</div>
-                          <div class="tui-chart-legend">50</div>
-                          <div class="tui-chart-legend">0</div>
-                        </div>
+                      <div style="height: 200px; width: 100%;">
+                        <Chart 
+                          type="vertical"
+                          data={[
+                            { label: 'Q1', value: 60, color: 'cyan-168' },
+                            { label: 'Q2', value: 80, color: 'green-168' },
+                            { label: 'Q3', value: 40, color: 'red-168' },
+                            { label: 'Q4', value: 90, color: 'yellow-168' }
+                          ]}
+                          max={100}
+                          xAxisLabels={['Q1', 'Q2', 'Q3', 'Q4']}
+                        />
                       </div>
                       <p style="text-align: center; font-size: 12px; color: #a8a8a8;">Vertical Chart</p>
                     </div>
                     
                     <div class="col s12 m6">
-                      <div class="tui-chart-horizontal" style="height: 200px; width: 100%; background-color: #000;">
-                        <div class="tui-chart-display">
-                          <div class="tui-chart-value cyan-255" style="width: 60%;">Sales: 60%</div>
-                          <div class="tui-chart-value green-255" style="width: 80%;">Marketing: 80%</div>
-                          <div class="tui-chart-value red-255" style="width: 40%;">Support: 40%</div>
-                          <div class="tui-chart-value yellow-255" style="width: 75%;">Dev: 75%</div>
-                        </div>
-                        <div class="tui-chart-y-axis">
-                          <div class="tui-chart-legend">Sales</div>
-                          <div class="tui-chart-legend">Marketing</div>
-                          <div class="tui-chart-legend">Support</div>
-                          <div class="tui-chart-legend">Dev</div>
-                        </div>
+                      <div style="height: 200px; width: 100%;">
+                        <Chart 
+                          type="horizontal"
+                          data={[
+                            { label: 'Sales', value: 60, color: 'cyan-168' },
+                            { label: 'Marketing', value: 80, color: 'green-168' },
+                            { label: 'Support', value: 40, color: 'red-168' },
+                            { label: 'Dev', value: 75, color: 'yellow-168' }
+                          ]}
+                          max={100}
+                        />
                       </div>
                       <p style="text-align: center; font-size: 12px; color: #a8a8a8;">Horizontal Chart</p>
                     </div>

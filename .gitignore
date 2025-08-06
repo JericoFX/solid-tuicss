@@ -38,3 +38,11 @@ playground/dist/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Ruby/Jekyll (GitHub Pages)
+Gemfile
+Gemfile.lock
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
