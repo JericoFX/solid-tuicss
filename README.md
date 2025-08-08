@@ -158,16 +158,6 @@ npm run deploy:netlify   # Netlify
 npm run deploy:surge     # Surge.sh
 ```
 
-### Example Sites
-
-Here are examples of successful deployments:
-
-- **GitHub Pages**: `https://username.github.io/solid-tuicss/`
-- **Netlify**: `https://solid-tuicss-demo.netlify.app/`
-- **Surge.sh**: `https://solid-tuicss-demo.surge.sh/`
-
-For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
-
 ## License
 
 MIT
