@@ -1,4 +1,6 @@
 import { Component, createSignal, For } from 'solid-js';
+// Import at least one component to trigger automatic CSS import
+import {} from 'solid-tuicss';
 
 const DocumentedApp: Component = () => {
   const [inputValue, setInputValue] = createSignal('Sample text');

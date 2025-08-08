@@ -35,13 +35,9 @@ function App() {
 }
 ```
 
-### CSS Import
+### Automatic Styling
 
-The TuiCSS styles are automatically imported when you import the components. If you need to import just the CSS:
-
-```tsx
-import 'solid-tuicss/css';
-```
+🎨 **No manual CSS import needed!** TuiCSS styles are automatically included when you install the package. Just import and use components directly.
 
 ## Components
 
