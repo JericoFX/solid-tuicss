@@ -5,7 +5,6 @@
       "name": "solid-tuicss",
       "dependencies": {
         "clsx": "^2.1.1",
-        "tuicss": "^2.1.2",
       },
       "devDependencies": {
         "@solidjs/testing-library": "^0.8.10",
@@ -14,6 +13,7 @@
         "@typescript-eslint/parser": "^8.39.0",
         "eslint": "^9.32.0",
         "solid-js": "^1.9.8",
+        "tuicss": "^2.1.2",
         "typescript": "^5.9.2",
         "vite": "^7.1.1",
         "vite-plugin-solid": "^2.11.7",

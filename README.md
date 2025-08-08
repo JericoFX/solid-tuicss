@@ -98,6 +98,69 @@ npm install
 npm run dev
 ```
 
+## GitHub Pages Deployment
+
+You can deploy the playground to GitHub Pages to showcase your TuiCSS components. The playground provides a live demo of all available components with the classic MS-DOS aesthetic.
+
+### Quick Setup
+
+1. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Source: "GitHub Actions"
+
+2. **Push the workflow** (included in `.github/workflows/deploy.yml`)
+
+3. **Deploy automatically** on every push to main
+
+### Manual Deployment
+
+To deploy manually:
+
+```bash
+# Build the playground
+cd playground
+npm install
+npm run build
+
+# The built files will be in playground/dist/
+# Upload these to your hosting service
+```
+
+### Live Demo
+
+Once deployed, your demo will be available at:
+`https://yourusername.github.io/solid-tuicss/`
+
+The playground includes:
+- **Component Gallery** - All TuiCSS components with examples
+- **Interactive Demos** - Working forms, modals, tabs, and more  
+- **MS-DOS Theme** - Authentic retro terminal styling
+- **Responsive Layout** - Adapts to different screen sizes
+
+### Deployment Scripts
+
+Quick deployment to various platforms:
+
+```bash
+# Local preview
+npm run deploy
+
+# Deploy to different platforms
+npm run deploy:github    # GitHub Pages (manual)
+npm run deploy:netlify   # Netlify
+npm run deploy:surge     # Surge.sh
+```
+
+### Example Sites
+
+Here are examples of successful deployments:
+
+- **GitHub Pages**: `https://username.github.io/solid-tuicss/`
+- **Netlify**: `https://solid-tuicss-demo.netlify.app/`
+- **Surge.sh**: `https://solid-tuicss-demo.surge.sh/`
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
 ## License
 
 MIT

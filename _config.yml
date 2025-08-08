@@ -1,0 +1,36 @@
+# Jekyll configuration for GitHub Pages
+name: Solid TuiCSS
+description: SolidJS components for TuiCSS framework
+url: https://jericofx.github.io
+baseurl: /solid-tuicss
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# GitHub Pages specific
+repository: JericoFX/solid-tuicss
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - package.json
+  - bun.lock
+  - node_modules/
+  - src/
+  - scripts/
+  - tsconfig.json
+  - vite.config.ts
+  - CLAUDE.md
+  - DEPLOYMENT.md
+
+# Include the playground dist files
+include:
+  - playground/dist/
+
+# Set the source to include playground/dist as the site root
+source: playground/dist

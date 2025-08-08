@@ -13,10 +13,15 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3001
+    port: 3001,
+    host: true,
+    hmr: {
+      overlay: false
+    }
   },
   assetsInclude: ['**/*.ttf', '**/*.png'],
   build: {
+    target: 'esnext',
     assetsDir: 'assets',
     rollupOptions: {
       output: {
@@ -33,5 +38,13 @@ export default defineConfig({
         },
       },
     },
+  },
+  optimizeDeps: {
+    include: ['solid-js', 'solid-js/web'],
+    force: true
+  },
+  esbuild: {
+    target: 'esnext',
+    format: 'esm'
   }
 });
