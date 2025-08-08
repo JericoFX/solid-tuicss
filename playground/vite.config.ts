@@ -2,7 +2,10 @@ import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import { resolve } from 'path';
 
+const repoName = 'solid-tuicss';
+
 export default defineConfig({
+  base: `/${repoName}/`,
   plugins: [solidPlugin()],
   resolve: {
     alias: {

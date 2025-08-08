@@ -1,5 +1,6 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
+import 'tuicss/dist/tuicss.css';
 import CompleteApp from './CompleteApp';
 
 const root = document.getElementById('root');

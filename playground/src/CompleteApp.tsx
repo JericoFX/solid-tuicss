@@ -1,4 +1,4 @@
-import { Component, createSignal, onMount } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 
 const CompleteApp: Component = () => {
   const [inputValue, setInputValue] = createSignal('Sample text');
@@ -6,7 +6,7 @@ const CompleteApp: Component = () => {
   const [radioValue, setRadioValue] = createSignal('first');
   const [selectValue, setSelectValue] = createSignal('second');
   const [progress, setProgress] = createSignal(75);
-  const [modalOpen, setModalOpen] = createSignal(false);
+  const [, setModalOpen] = createSignal(false);
   const [activeTab, setActiveTab] = createSignal('forms');
 
   // Demo data para tabla
