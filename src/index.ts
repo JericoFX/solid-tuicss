@@ -4,4 +4,4 @@ export * from './types';
 export * from './utils/cn';
 
 // CSS import for users who want to import it directly
-import 'tuicss/dist/tuicss.css';
+import 'tuicss/dist/tuicss.min.css';
