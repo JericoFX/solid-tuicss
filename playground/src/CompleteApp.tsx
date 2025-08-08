@@ -1,5 +1,5 @@
 import { Component, createSignal } from 'solid-js';
-
+import {} from 'solid-tuicss';
 // Import Chart component
 const Chart: Component<any> = (props) => {
   return (
