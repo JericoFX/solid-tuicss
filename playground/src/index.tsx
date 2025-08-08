@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
 import 'tuicss/dist/tuicss.css';
-import CompleteApp from './CompleteApp';
+import DocumentedApp from './DocumentedApp';
 
 const root = document.getElementById('root');
 
@@ -11,4 +11,4 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <CompleteApp />, root!);
+render(() => <DocumentedApp />, root!);

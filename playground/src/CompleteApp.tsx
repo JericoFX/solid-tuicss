@@ -1,5 +1,14 @@
 import { Component, createSignal } from 'solid-js';
 
+// Import Chart component
+const Chart: Component<any> = (props) => {
+  return (
+    <div class="tui-chart" data-type={props.type}>
+      <div>Chart placeholder - {props.type}</div>
+    </div>
+  );
+};
+
 const CompleteApp: Component = () => {
   const [inputValue, setInputValue] = createSignal('Sample text');
   const [checkboxValue, setCheckboxValue] = createSignal(true);
