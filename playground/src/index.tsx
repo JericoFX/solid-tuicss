@@ -1,6 +1,6 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
-import DocumentedApp from './DocumentedApp';
+import CompleteApp from './CompleteApp';
 
 const root = document.getElementById('root');
 
@@ -10,4 +10,4 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <DocumentedApp />, root!);
+render(() => <CompleteApp />, root!);
