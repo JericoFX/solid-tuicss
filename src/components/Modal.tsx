@@ -8,21 +8,22 @@ export const Modal: Component<ModalProps> = (props) => {
     <Show when={props.open}>
       <Portal>
         {/* Overlap layer */}
-        <div class="tui-overlap" onClick={props.onClose}></div>
+        <div class="tui-overlap active" onClick={props.onClose}></div>
         
         {/* Modal window */}
         <div 
           id={props.id}
-          class={cn('tui-modal', props.class)}
+          class={cn('tui-modal active', props.class)}
           onClick={(e) => e.stopPropagation()}
           style={{
             position: 'fixed',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            'z-index': '1000',
+            'z-index': '1001',
             'max-width': '90vw',
-            'max-height': '90vh'
+            'max-height': '90vh',
+            display: 'block'
           }}
         >
           <div class={cn('tui-window', props.color)}>
